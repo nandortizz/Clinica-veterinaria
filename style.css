@@ -1,0 +1,242 @@
+/* style.css */
+
+/* Variables CSS */
+:root {
+    --color-primary: #2C3E50;
+    --color-secondary: #18BC9C;
+    --color-accent: #F39C12;
+    --font-family-base: Arial, sans-serif;
+    --shadow-card: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.2);
+    --background-servicios: #f8f9fa; /* Gris claro para servicios */
+    --background-equipo: #e9ecef; /* Gris un poco más oscuro para equipo */
+}
+
+body {
+    font-family: var(--font-family-base);
+    color: var(--color-primary);
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(135deg, var(--color-primary) 0%, darken(var(--color-primary), 10%) 100%); /* Gradiente sutil */
+    box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.7rem; /* Aumenta un poco el tamaño */
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--color-accent);
+    transform: scale(1.1); /* Efecto de escala al pasar el ratón */
+    transition: transform 0.2s ease-in-out;
+}
+
+.bg-primary {
+    background-color: var(--color-primary) !important;
+}
+
+/* Sección Inicio */
+#inicio {
+    padding-top: 90px; /* Ajuste para el menú fijo más alto */
+    padding-bottom: 60px;
+    background-color: #ffffff; /* Fondo blanco para contrastar mejor */
+}
+
+#inicio .display-4 {
+    font-size: 3rem; /* Título más grande */
+    font-weight: bold; /* Título en negrita */
+    color: var(--color-primary); /* Asegura que el color sea el primario */
+    text-shadow: 0.1rem 0.1rem 0.2rem rgba(0,0,0,0.1); /* Sombra de texto sutil */
+}
+
+
+#inicio .lead {
+    font-size: 1.2rem;
+    color: #6c757d; /* Un gris más suave para el párrafo */
+}
+
+#inicio .banner-image {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    border-radius: 15px; /* Bordes más redondeados */
+    overflow: hidden; /* Asegura que la imagen se mantenga dentro de los bordes redondeados */
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Sombra más pronunciada para el banner */
+}
+
+.cta-button {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    padding: 1rem 2.5rem; /* Botón más grande */
+    font-size: 1.2rem;
+    border-radius: 30px; /* Botón más redondeado */
+    box-shadow: 0.3rem 0.3rem 0.6rem rgba(0, 0, 0, 0.2); /* Sombra para el botón CTA */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Transiciones para hover */
+}
+
+.cta-button:hover {
+    background-color: darken(var(--color-secondary), 10%);
+    border-color: darken(var(--color-secondary), 10%);
+    transform: translateY(-3px); /* Ligeramente elevado en hover */
+    box-shadow: 0.5rem 0.5rem 0.8rem rgba(0, 0, 0, 0.3); /* Sombra más fuerte en hover */
+}
+
+/* Sección Servicios */
+#servicios {
+    background-color: var(--background-servicios);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#servicios h2 {
+    font-size: 2.5rem; /* Título de sección más grande */
+    color: var(--color-primary);
+    font-weight: bold;
+    margin-bottom: 2.5rem; /* Más espacio debajo del título */
+    text-transform: uppercase; /* Título en mayúsculas */
+    letter-spacing: 0.1em; /* Espaciado entre letras */
+}
+
+
+#servicios .servicio-card {
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #fff; /* Fondo blanco para las tarjetas de servicio */
+    box-shadow: 0.4rem 0.4rem 0.7rem rgba(0, 0, 0, 0.2); /* Sombra un poco más fuerte */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones para hover */
+}
+
+#servicios .servicio-card:hover {
+    transform: scale(1.07); /* Escala más al hacer hover */
+    box-shadow: 0.6rem 0.6rem 1rem rgba(0, 0, 0, 0.3); /* Sombra más fuerte en hover */
+}
+
+
+#servicios .servicio-img {
+    height: 250px; /* Imágenes de servicio más altas */
+    object-fit: cover;
+}
+
+#servicios .servicio-icon {
+    font-size: 2.5rem; /* Iconos de servicio más grandes */
+    color: var(--color-secondary);
+    margin-bottom: 20px;
+    text-shadow: 0.1rem 0.1rem 0.3rem rgba(0, var(--color-secondary), 0, 0.5); /* Sombra en el icono */
+}
+
+#servicios .card-title {
+    font-size: 1.7rem; /* Títulos de tarjetas de servicio más grandes */
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+#servicios .card-text {
+    color: #495057; /* Texto de descripción un poco más oscuro */
+}
+
+
+/* Sección Equipo */
+#equipo {
+    background-color: var(--background-equipo);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#equipo h2 {
+    font-size: 2.5rem; /* Título de sección más grande */
+    color: var(--color-primary);
+    font-weight: bold;
+    margin-bottom: 2.5rem; /* Más espacio debajo del título */
+    text-transform: uppercase; /* Título en mayúsculas */
+    letter-spacing: 0.1em; /* Espaciado entre letras */
+}
+
+
+#equipo .equipo-card {
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #fff; /* Fondo blanco para las tarjetas del equipo */
+    box-shadow: 0.4rem 0.4rem 0.7rem rgba(0, 0, 0, 0.2); /* Sombra similar a servicios */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones para hover */
+}
+
+#equipo .equipo-card:hover {
+    transform: translateY(-5px); /* Elevar un poco más en hover */
+    box-shadow: 0.6rem 0.6rem 1rem rgba(0, 0, 0, 0.3); /* Sombra más fuerte en hover */
+}
+
+
+#equipo .equipo-img {
+    width: 180px; /* Imágenes de equipo un poco más grandes */
+    height: 180px;
+    object-fit: cover;
+    margin: 20px auto;
+    display: block;
+    border: 7px solid var(--color-secondary); /* Borde más grueso */
+    transition: border-color 0.3s ease; /* Transición para el borde en hover */
+}
+
+#equipo .equipo-card:hover .equipo-img {
+    border-color: var(--color-accent); /* Borde cambia a color acento en hover */
+}
+
+
+#equipo .card-title {
+    font-size: 1.5rem; /* Títulos de equipo un poco más grandes */
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+#equipo .card-subtitle {
+    color: var(--color-secondary); /* Especialidad en color secundario */
+    margin-bottom: 1rem;
+}
+
+#equipo .card-text {
+    color: #6c757d; /* Descripción en gris un poco más claro */
+}
+
+/* Sección Contacto y Footer - Sin cambios significativos en esta revisión, pero se pueden refinar más tarde si es necesario */
+
+
+/* Media Queries para Responsividad - Ajustes menores para tamaños de fuente en móviles */
+
+/* Para pantallas más pequeñas que 768px (móviles) */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.4rem; /* Reduce un poco el tamaño en móviles */
+    }
+
+    #inicio .display-4 {
+        font-size: 2.3rem; /* Reduce tamaño del título en inicio para móviles */
+    }
+
+    #inicio .lead {
+        font-size: 1rem; /* Reduce tamaño del párrafo en inicio para móviles */
+    }
+
+    #servicios h2,
+    #equipo h2 {
+        font-size: 2.2rem; /* Reduce tamaño de títulos de sección en móviles */
+    }
+
+    #servicios .card-title {
+        font-size: 1.5rem; /* Reduce tamaño de títulos de tarjeta de servicio en móviles */
+    }
+
+    #equipo .card-title {
+        font-size: 1.4rem; /* Reduce tamaño de títulos de tarjeta de equipo en móviles */
+    }
+
+    #contacto .telefono-grande {
+        font-size: 1.2rem; /* Reduce tamaño del teléfono en contacto para móviles */
+    }
+}
